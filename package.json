@@ -1,0 +1,16 @@
+{
+  "name": "timetable-fns",
+  "version": "0.1.0",
+  "description": "Useful date and time utility functions for working with timetables.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://github.com/flightplan-tool/timetable-fns",
+  "author": "JD",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "moment-timezone": "^0.5.23"
+  }
+}
