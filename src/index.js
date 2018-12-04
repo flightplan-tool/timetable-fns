@@ -1,4 +1,4 @@
-const moment = require('moment-timezone')
+import moment from 'moment-timezone'
 
 const reDate = /^(\d{4})-(\d{2})-(\d{2})$/
 const reTime = /^(\d{2}):(\d{2})$/
@@ -60,40 +60,40 @@ function _str (y, m, d) {
     d.toString().padStart(2, '0')
 }
 
-function coerce (dt) {
+export function coerce (dt) {
   return moment.isMoment(dt) ? dt.format('YYYY-MM-DD') : dt
 }
 
-function coerceTime (dt) {
+export function coerceTime (dt) {
   return moment.isMoment(dt) ? dt.format('HH:mm') : dt
 }
 
-function format (dt) {
+export function format (dt) {
   return moment(dt, 'YYYY-MM-DD', true).format('L')
 }
 
-function diff (a, b) {
+export function diff (a, b) {
   return _g(b) - _g(a)
 }
 
-function plus (dt, days) {
+export function plus (dt, days) {
   return _d(_g(dt) + days)
 }
 
-function minus (dt, days) {
+export function minus (dt, days) {
   return _d(_g(dt) - days)
 }
 
-function today () {
+export function today () {
   const m = moment()
   return _str(m.year(), m.month() + 1, m.date())
 }
 
-function valid (dt) {
+export function valid (dt) {
   return dt !== INVALID && dt === _d(_g(dt))
 }
 
-function validTime (dt) {
+export function validTime (dt) {
   if (dt && typeof dt === 'string') {
     const r = reTime.exec(dt)
     if (r) {
@@ -103,16 +103,4 @@ function validTime (dt) {
     }
   }
   return false
-}
-
-module.exports = {
-  coerce,
-  coerceTime,
-  format,
-  diff,
-  plus,
-  minus,
-  today,
-  valid,
-  validTime
 }
