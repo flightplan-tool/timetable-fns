@@ -1,6 +1,6 @@
 {
   "name": "timetable-fns",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Useful date and time utility functions for working with timetables.",
   "main": "dist/timetable-fns.js",
   "module": "src/index.js",

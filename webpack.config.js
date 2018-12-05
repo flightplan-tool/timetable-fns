@@ -13,7 +13,8 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'timetable-fns.js',
     library: 'timetable-fns',
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
+    globalObject: "typeof self !== 'undefined' ? self : this"
   },
   externals: {
     'moment-timezone': {
