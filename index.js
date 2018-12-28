@@ -10,7 +10,9 @@ function _g (str) {
   if (!arr || arr.includes(NaN)) {
     return NaN
   }
-  var [ y, m, d ] = arr
+  var y = arr[0]
+  var m = arr[1]
+  var d = arr[2]
   m = (m + 9) % 12
   y = y - Math.floor(m / 10)
   return 365 * y +
