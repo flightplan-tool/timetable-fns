@@ -108,13 +108,13 @@ function validTime (dt) {
 }
 
 module.exports = {
-  coerce,
-  coerceTime,
-  format,
-  diff,
-  plus,
-  minus,
-  today,
-  valid,
-  validTime
+  coerce: coerce,
+  coerceTime: coerceTime,
+  format: format,
+  diff: diff,
+  plus: plus,
+  minus: minus,
+  today: today,
+  valid: valid,
+  validTime: validTime
 }
