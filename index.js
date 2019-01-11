@@ -108,8 +108,10 @@ function validTime (dt) {
 }
 
 module.exports = {
+  calendarDate: _d,
   coerce: coerce,
   coerceTime: coerceTime,
+  dayNumber: _g,
   format: format,
   diff: diff,
   plus: plus,
