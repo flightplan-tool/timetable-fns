@@ -62,13 +62,15 @@ A benchmark is included, which compares timetable to [moment.js](https://momentj
 ```
 benchmarking diff performance ...
 
-timetable x 1,280,728 ops/sec ±1.92% (90 runs sampled)
-moment x 52,968 ops/sec ±1.68% (90 runs sampled)
-moment (reuse) x 519,085 ops/sec ±1.60% (92 runs sampled)
+timetable x 1,334,060 ops/sec ±1.23% (88 runs sampled)
+moment x 61,841 ops/sec ±0.57% (95 runs sampled)
+moment (reuse) x 591,905 ops/sec ±1.90% (86 runs sampled)
+date-fns x 375,733 ops/sec ±0.60% (92 runs sampled)
 
               timetable was fastest
-         moment (reuse) was 59.3% ops/sec slower (factor 2.5)
-                 moment was 95.9% ops/sec slower (factor 24.1)
+         moment (reuse) was 55.9% ops/sec slower (factor 2.3)
+               date-fns was 71.7% ops/sec slower (factor 3.5)
+                 moment was 95.3% ops/sec slower (factor 21.4)
 ```
 
 Even when reusing the same moment objects (whereas `timetable` is re-parsing the provided dates every time), `moment.js` is still 2.5x slower. Of course, `moment.js` is doing a lot more work, because it supports time, but if you need to only perform date calculations `timetable` is a much faster choice.
