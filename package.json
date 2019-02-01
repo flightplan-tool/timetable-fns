@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "benchmark": "^2.1.4",
-    "chalk": "^2.4.2"
+    "chalk": "^2.4.2",
+    "date-fns": "^1.30.1"
   }
 }

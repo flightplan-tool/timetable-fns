@@ -1,5 +1,6 @@
 const benchmark = require('benchmark')
 const chalk = require('chalk')
+const dateFns = require('date-fns')
 const moment = require('moment')
 const timetable = require('./index')
 
@@ -54,5 +55,8 @@ newSuite('diff')
   })
   .add('moment (reuse)', function () {
     moment1.diff(moment2, 'days')
+  })
+  .add('date-fns', function () {
+    dateFns.differenceInCalendarDays(new Date(2019, 8, 17), new Date(1912, 3, 14))
   })
   .run()
