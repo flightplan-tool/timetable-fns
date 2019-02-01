@@ -4,14 +4,25 @@
   "description": "Useful date and time utility functions for working with timetables.",
   "main": "index.js",
   "scripts": {
+    "bench": "node bench.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": "https://github.com/flightplan-tool/timetable-fns",
-  "keywords": [ "timetable", "timetables", "dates", "calendar", "gregorian" ],
+  "keywords": [
+    "timetable",
+    "timetables",
+    "dates",
+    "calendar",
+    "gregorian"
+  ],
   "author": "JD",
   "license": "ISC",
   "private": false,
   "dependencies": {
-    "moment-timezone": "^0.5.23"
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {
+    "benchmark": "^2.1.4",
+    "chalk": "^2.4.2"
   }
 }
