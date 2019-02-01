@@ -1,4 +1,4 @@
-var moment = require('moment-timezone')
+var moment = require('moment')
 
 var reDate = /^(\d{4})-(\d{2})-(\d{2})$/
 var reTime = /^(\d{2}):(\d{2})$/
