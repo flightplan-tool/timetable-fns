@@ -82,3 +82,4 @@ You can also run the benchmark yourself, with: `yarn bench` (or `npm run bench`)
 All date operations are based on the concept of an integer day number, similar to the concept of the [Julian Day Number](https://en.wikipedia.org/wiki/Julian_day). The algorithms to compute a Gregorian-based day number (and back) are from:
 
 https://alcor.concordia.ca/~gpkatch/gdate-algorithm.html
+[Archived Version](https://web.archive.org/web/20170507133619/https://alcor.concordia.ca/~gpkatch/gdate-algorithm.html)
