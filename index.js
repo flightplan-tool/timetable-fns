@@ -1,4 +1,12 @@
-var moment = require('moment')
+// Optionally require moment (only needed for the conversion helpers)
+var moment = null
+try {
+  moment = require.resolve('moment')
+} catch (e) {
+  if (e.code !== 'MODULE_NOT_FOUND') {
+    throw e
+  }
+}
 
 var reDate = /^(\d{4})-(\d{2})-(\d{2})$/
 var reTime = /^(\d{2}):(\d{2})$/
@@ -63,14 +71,23 @@ function _str (y, m, d) {
 }
 
 function coerce (dt) {
+  if (!moment) {
+    throw new Error("Cannot find module 'moment': please install manually to use the conversion helpers")
+  }
   return moment.isMoment(dt) ? dt.format('YYYY-MM-DD') : dt
 }
 
 function coerceTime (dt) {
+  if (!moment) {
+    throw new Error("Cannot find module 'moment': please install manually to use the conversion helpers")
+  }
   return moment.isMoment(dt) ? dt.format('HH:mm') : dt
 }
 
 function format (dt) {
+  if (!moment) {
+    throw new Error("Cannot find module 'moment': please install manually to use the conversion helpers")
+  }
   return moment(dt, 'YYYY-MM-DD', true).format('L')
 }
 
