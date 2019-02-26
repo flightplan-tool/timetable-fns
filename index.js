@@ -104,8 +104,8 @@ function minus (dt, days) {
 }
 
 function today () {
-  var m = moment()
-  return _str(m.year(), m.month() + 1, m.date())
+  var d = new Date()
+  return _str(d.getFullYear(), d.getMonth() + 1, d.getDate())
 }
 
 function valid (dt) {
