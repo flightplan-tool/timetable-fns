@@ -1,7 +1,7 @@
 // Optionally require moment (only needed for the conversion helpers)
 var moment = null
 try {
-  moment = require.resolve('moment')
+  moment = require('moment')
 } catch (e) {
   if (e.code !== 'MODULE_NOT_FOUND') {
     throw e
